@@ -2,9 +2,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addProduct } from "./features/counter/productSlice";
+import { addProduct } from "./features/product/productSlice";
 import ListProducts from "./components/ListProducts";
-import "./App.scss"
+import "./App.scss";
 // import styles from './Counter.module.css'
 
 export function App() {
@@ -52,20 +52,15 @@ export function App() {
         flexDirection: "column",
         gap: "50px",
       }}
-
       className="App"
     >
       <h1>Create Product</h1>
-      <form
-        onSubmit={handleSubmit}
-        className="inputForm"
-      >
+      <form onSubmit={handleSubmit} className="inputForm">
         <input
           type="text"
           name="productId"
           placeholder="Product ID"
           className="inputGroup"
-      
           value={products.productId}
           onChange={handleInputChange}
         />
@@ -87,7 +82,13 @@ export function App() {
         />
         <textarea
           name="productDescription"
-          style={{ width: "350px", height: "50px", border: "1px solid", borderRadius: "8px", padding: "5px"}}
+          style={{
+            width: "350px",
+            height: "50px",
+            border: "1px solid",
+            borderRadius: "8px",
+            padding: "5px",
+          }}
           placeholder="Product Description"
           value={products.productDescription}
           onChange={handleInputChange}
@@ -101,7 +102,7 @@ export function App() {
           onChange={handleInputChange}
         />
         <input
-           className="inputGroup"
+          className="inputGroup"
           type="date"
           name="dateCreated"
           placeholder="Date Created"
@@ -109,7 +110,18 @@ export function App() {
           onChange={handleInputChange}
         />
 
-        <button type="submit" style={{ width: "200px", height: "50px", borderRadius: "8px" , cursor: "pointer"}}> Add Product</button>
+        <button
+          type="submit"
+          style={{
+            width: "200px",
+            height: "50px",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          {" "}
+          Add Product
+        </button>
       </form>
 
       <ListProducts />
@@ -118,8 +130,3 @@ export function App() {
 }
 export default App;
 
-// Your task:
-// 1.    Create a simple functional Product List Application
-// a.    Create a Product with the following parameters (Product Id, Product Name, Product Type, Product Description, Status, Date Created)
-// b.    List the Product that was created.
-// c.    Viewing of a Product list

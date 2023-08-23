@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectProducts } from "../features/counter/productSlice";
+import { selectProducts } from "../features/product/productSlice";
 
 const ListProducts = () => {
   const products = useSelector(selectProducts);
@@ -20,14 +20,12 @@ const ListProducts = () => {
         </div>
         {products?.map((product) => (
           <div key={product.productId} className="body">
-         
-              <p>{product.productId}</p>
-              <p>{product.productName}</p>
-              <p>{product.productType}</p>
-              <p>{product.productDescription}</p>
-              <p>{product.status}</p>
-              <p>{product.dateCreated}</p>
-        
+            <p>{product.productId}</p>
+            <p>{product.productName}</p>
+            <p>{product.productType}</p>
+            <p>{product.productDescription}</p>
+            <p>{product.status}</p>
+            <p>{product.dateCreated}</p>
           </div>
         ))}
       </div>
