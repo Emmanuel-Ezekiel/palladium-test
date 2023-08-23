@@ -1,1 +1,53 @@
 
+.App {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .inputForm {
+        width: 1200px;
+        border: 1px solid #fbeef1;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        .inputGroup {
+            width: 350px;
+    
+            height: 30px;
+            padding: 5px;
+          border-radius: 8px;
+        }
+    }
+
+    .list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            gap: 30px;
+        }
+
+        .body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 300;
+            width: 100%;
+
+        }
+    }
+}

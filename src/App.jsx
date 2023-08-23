@@ -4,6 +4,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addProduct } from "./features/counter/productSlice";
 import ListProducts from "./components/ListProducts";
+import "./App.scss"
 // import styles from './Counter.module.css'
 
 export function App() {
@@ -51,23 +52,20 @@ export function App() {
         flexDirection: "column",
         gap: "50px",
       }}
+
+      className="App"
     >
       <h1>Create Product</h1>
       <form
         onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          gap: "10px",
-        }}
+        className="inputForm"
       >
         <input
           type="text"
           name="productId"
           placeholder="Product ID"
-          style={{ width: "200px", height: "30px"}}
+          className="inputGroup"
+      
           value={products.productId}
           onChange={handleInputChange}
         />
@@ -75,7 +73,7 @@ export function App() {
           type="text"
           name="productName"
           placeholder="Product Name"
-          style={{ width: "200px", height: "30px"}}
+          className="inputGroup"
           value={products.productName}
           onChange={handleInputChange}
         />
@@ -83,27 +81,27 @@ export function App() {
           type="text"
           name="productType"
           placeholder="Product Type"
-          style={{ width: "200px", height: "30px"}}
+          className="inputGroup"
           value={products.productType}
           onChange={handleInputChange}
         />
         <textarea
           name="productDescription"
-          style={{ width: "200px", height: "50px"}}
+          style={{ width: "350px", height: "50px", border: "1px solid", borderRadius: "8px", padding: "5px"}}
           placeholder="Product Description"
           value={products.productDescription}
           onChange={handleInputChange}
         />
         <input
           type="text"
-          style={{ width: "200px", height: "30px"}}
+          className="inputGroup"
           name="status"
           placeholder="status"
           value={products.status}
           onChange={handleInputChange}
         />
         <input
-        style={{ width: "200px", height: "30px"}}
+           className="inputGroup"
           type="date"
           name="dateCreated"
           placeholder="Date Created"
@@ -111,7 +109,7 @@ export function App() {
           onChange={handleInputChange}
         />
 
-        <button type="submit" style={{ width: "100px", height: "50px"}}> Add Product</button>
+        <button type="submit" style={{ width: "100px", height: "50px", borderRadius: "8px"}}> Add Product</button>
       </form>
 
       <ListProducts />
