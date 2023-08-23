@@ -109,7 +109,7 @@ export function App() {
           onChange={handleInputChange}
         />
 
-        <button type="submit" style={{ width: "100px", height: "50px", borderRadius: "8px"}}> Add Product</button>
+        <button type="submit" style={{ width: "200px", height: "50px", borderRadius: "8px" , cursor: "pointer"}}> Add Product</button>
       </form>
 
       <ListProducts />

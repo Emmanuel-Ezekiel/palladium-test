@@ -11,12 +11,12 @@ const ListProducts = () => {
     <div>
       <div className="list">
         <div className="head">
-          <h1>product Id</h1>
-          <h1>product Name</h1>
-          <h1>product Type</h1>
-          <h1>product Description</h1>
-          <h1>status</h1>
-          <h1>date Created</h1>
+          <h1>Product Id</h1>
+          <h1>Product Name</h1>
+          <h1>Product Type</h1>
+          <h1>Product Description</h1>
+          <h1>Status</h1>
+          <h1>Date Created</h1>
         </div>
         {products?.map((product) => (
           <div key={product.productId} className="body">

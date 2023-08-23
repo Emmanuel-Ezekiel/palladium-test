@@ -7,19 +7,17 @@
     align-items: center;
 
     .inputForm {
-        width: 1200px;
-        border: 1px solid #fbeef1;
+        width: 800px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 20px;
 
         .inputGroup {
             width: 350px;
-    
-            height: 30px;
+            height: 50px;
             padding: 5px;
           border-radius: 8px;
         }
